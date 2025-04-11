@@ -1,0 +1,142 @@
+body {
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="file"],
+textarea,
+select {
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+button {
+    background-color: #00cc00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#status {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+#downloadLink {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Loading Spinner */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00cc00;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+.light-theme {
+  background-color: #eee;
+  color: #333;
+}
+.light-theme input[type="file"],
+.light-theme textarea,
+.light-theme select {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.light-theme #status {
+    background-color: #fff;
+    color:#333;
+    border: 1px solid #ccc;
+}
+
+.light-theme .loader{
+    border-top: 4px solid #333;
+    border: 4px solid #ccc;
+}

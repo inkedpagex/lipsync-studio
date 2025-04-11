@@ -1,0 +1,6 @@
+opencv-python
+librosa
+diffusers[torch]
+TTS
+openai-whisper
+mediapipe

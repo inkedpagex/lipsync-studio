@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LipSync Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LipSync Studio</h1>
+        <div class="file-uploads">
+            <label for="videoUpload">Upload Video</label>
+            <input type="file" id="videoUpload" accept=".mp4">
+            <label for="audioUpload">Upload Audio</label>
+            <input type="file" id="audioUpload" accept=".wav">
+            <label for="costumeUpload">Upload Costume (Optional)</label>
+            <input type="file" id="costumeUpload" accept=".jpg, .jpeg, .png">
+            <label for="voiceSampleUpload">Upload Voice Sample (Optional)</label>
+            <input type="file" id="voiceSampleUpload" accept=".wav">
+        </div>
+        <div class="text-input">
+            <label for="ttsText">TTS Text (Optional)</label>
+            <textarea id="ttsText" placeholder="Enter text for voice generation"></textarea>
+        </div>
+        <div class="settings">
+            <label for="language">Language</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="hi">Hindi</option>
+            </select>
+            <label for="emotion">Emotion Intensity</label>
+            <input type="range" id="emotion" min="0" max="1" step="0.1" value="0.5">
+            <div class="checkbox-group">
+                <input type="checkbox" id="realTimeMode">
+                <label for="realTimeMode">Enable Real-Time Lip Sync</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="autoBackground">
+                <label for="autoBackground">Generate Background</label>
+            </div>
+            <label for="angleMode">Camera Angle</label>
+            <select id="angleMode">
+                <option value="front">Front</option>
+                <option value="side">Side</option>
+                <option value="3/4">3/4</option>
+            </select>
+        </div>
+        <button id="generateButton">Generate Video</button>
+        <div class="status-output">
+            <label for="status">Status</label>
+            <div id="status">Ready</div>
+            <a id="downloadLink" href="#" download="output.mp4" style="display: none;">Download Output Video</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
